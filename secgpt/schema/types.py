@@ -25,7 +25,7 @@ class Filing10Q(BaseFiling):
 
 class Filing8K(BaseFiling):
     """ 8-K Filing """
-    def __init__(self, filing_info: CompanyFiling):
+    def __init__(self):
         self.data.fromkeys(FILING_10_Q_SECTIONS)
 
     @classmethod

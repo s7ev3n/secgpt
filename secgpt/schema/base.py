@@ -30,7 +30,7 @@ class BaseFiling:
     See constants.py for keys for different types of filing, 
     e.g. FILING_10_K_SECTIONS
     """
-    data = Optional[Dict[str, Any]] = None
+    data : Optional[Dict[str, Any]] = None
     filing_info : FilingInfo = None
 
     """
@@ -45,22 +45,35 @@ class BaseFiling:
     def get_type(cls) -> str:
         """ Get filing type """
     
-    def set_filing_info(self, Any) -> None:
+    def set_filing_info(self, info : FilingInfo) -> None:
         """ set filing info """
+        self.filing_info = info
     
-    def set_filing_data(self) -> None:
+    def from_dict(self, data : Dict[str, Any]) -> None:
         """ set filing data """
+        self.data = data
 
     def get_data_by_section(self, section_key : str) -> str:
         """Get filing section text given supported section item keys"""
 
         assert self.data is not None, \
-            'No filing data, parse and set filing data first'
+            'No filing data, use from_dict() to fill the data first'
         assert section_key in self.data.keys(), \
             'Not supported section item'
         
         return self.data[section_key]
     
-    def get_filing_info(self) -> Any:
+    def get_data(self) -> dict:
+        """Get the data dict"""
+        assert self.data is not None, \
+            'No filing data, use from_dict() to fill the data first'
+        
+        return self.data
+
+    def get_filing_info(self) -> FilingInfo:
         """ Get filing info """
+        assert self.filing_info is not None, \
+            "Not set filing info, please set_filing_info() first"
+        
+        return self.filing_info
     
