@@ -1,12 +1,12 @@
 """Base class for SEC filings."""
 from abc import abstractmethod
-from enum import Enum, auto
+from enum import Enum
 from typing import Any, Dict, List, Optional
 
 class FilingType(str, Enum):
-    TenK = auto() # 10-K
-    TenQ = auto() # 10-Q
-    EightK = auto() # 8-K
+    TenK = "10-K"
+    TenQ = "10-Q"
+    EightK = "8-K"
 
 # For filing info, refer to https://sec-api.io/docs/query-api
 class FilingInfo:
