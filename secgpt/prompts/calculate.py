@@ -1,0 +1,3 @@
+prompt1 = "Calculate  {Item: net income, Gross margin, Revenue} growth ratio  of {Company: Apple} in {Quarter: Q3} of {Year: 2020, past three years} {over previous quarter; year-over-year}"
+prompt2 = "Calculate average {Item: net income, Gross margin, Revenue} of {Company: Apple} in {Quarter: Q3} of {Year: 2020, past three years} from {Form:10-Q} {over past 3 months; over past 9 months}"
+prompt3 = "Calculate the ratio of {item: revenue, cash, asset & liabilities} of {Company: Apple} in {Quarter: Q3} of {Year: 2020}"

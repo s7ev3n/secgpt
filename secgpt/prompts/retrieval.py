@@ -1,0 +1,2 @@
+prompt1 = "List the {Item: net income, Gross margin, Revenue, Earning per shares} of {Company: Apple} in {Quarter: Q3} of {Year: 2020, past three years}"
+prompt2 = "Summarize the {Item: Risk factor} of {Company: Apple} from the {Form: 10-K} of {Year: 2020, past three years}"
